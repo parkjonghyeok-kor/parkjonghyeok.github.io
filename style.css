@@ -7,46 +7,49 @@ body {
     color: #333;
 }
 
+/* 1. header 설정 */
 header {
     display: flex;
-    flex-direction: column; /* 세로로 배치 (이름 아래 메뉴) */
-    align-items: flex-start; /* 왼쪽 정렬 */
-    margin-bottom: 100px;    /* 본문과의 간격 확보 */
+    flex-direction: column; 
+    align-items: flex-start; 
+    margin-bottom: 100px;    
 }
 
+/* 2. h1 설정 (하나만 남기세요) */
 h1 {
-    font-size: 100px;
-    font-weight: 800;
-    margin: 0 0 25px 0; /* 이름과 메뉴 사이의 미세한 간격 */
+    font-size: 100px;        /* 원하는 크기 */
+    font-weight: 800;        /* 원하는 두께 */
+    margin: 0 0 25px 0; 
     letter-spacing: -0.02em;
+    font-family: 'Helvetica', 'Arial', sans-serif;
 }
 
+/* h1 a 스타일 (이것도 추가해두면 링크 색상이 검정으로 고정됩니다) */
+h1 a {
+    text-decoration: none;
+    color: #000;
+}
+
+/* 3. nav 설정 (중복 삭제 후 하나로 통일) */
 nav ul {
-    list-style: none;     /* 점 표시 제거 */
+    list-style: none;
     padding: 0;
     margin: 0;
-    display: flex;        /* 정렬을 위해 플렉스 박스 사용 */
-    flex-direction: column; /* ★핵심: 항목들을 세로 방향(열)으로 나열 */
-    gap: 10px;            /* Work와 About 사이의 세로 간격 */
-}
-
-nav li {
-    margin: 0;            /* 불필요한 마진 제거 */
+    display: flex;
+    flex-direction: column; 
+    gap: 15px; 
 }
 
 nav a {
     text-decoration: none;
     color: #999;
-    font-size: 14px;
-    display: block;       /* 클릭 영역을 넓히고 세로 배치를 확고히 함 */
+    font-size: 18px; /* 메뉴 글씨도 조금 키웠습니다 */
+    transition: 0.3s;
 }
 
-h1 { font-size: 1.2rem; font-weight: 400; letter-spacing: -0.02em; }
-
-nav ul { list-style: none; display: flex; gap: 20px; padding: 0; }
-nav a { text-decoration: none; color: #999; font-size: 0.9rem; transition: 0.3s; }
-nav a:hover { color: #000; }
-
+nav a:hover {
+    color: #000;
+}
 /* 갤러리 그리드 레이아웃 */
 .gallery {
     display: grid;
@@ -58,7 +61,7 @@ nav a:hover { color: #000; }
     width: 100%;
     height: auto;
     display: block;
-    filter: grayscale(10%;) /* 약간의 차분한 느낌 부여 */
+    filter: grayscale(10%); /* 약간의 차분한 느낌 부여 */
 }
 
 /* 모바일 대응 */
