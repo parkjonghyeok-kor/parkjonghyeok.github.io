@@ -25,19 +25,20 @@ nav ul {
     list-style: none;
     padding: 0;
     margin: 0;
-    display: flex; /* 메뉴 항목들은 가로로 나열 */
-    gap: 15px;     /* 메뉴 사이 간격 */
+    display: flex;
+    flex-direction: column; /* 메뉴 항목들을 세로로 쌓기 */
+    gap: 10px;              /* 메뉴와 메뉴 사이의 상하 간격 */
 }
 
 nav a {
     text-decoration: none;
-    color: #999; /* 기본은 흐리게 */
+    color: #999;
     font-size: 14px;
     transition: 0.3s;
 }
 
 nav a:hover {
-    color: #000; /* 마우스 올리면 진하게 */
+    color: #000;
 }
 
 h1 { font-size: 1.2rem; font-weight: 400; letter-spacing: -0.02em; }
